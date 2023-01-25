@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home__container{
+    position: relative;
+    .carusel{
+        h1{
+            display: flex;
+            align-items: center;
+            
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            z-index: 999;
+            color: white;
+            font-family: Arial, Helvetica;
+            font-size: 70px;
+            font-weight: 200;
+            div{
+                background-color: #ffc107;
+                padding: 10px;
+                margin: 0px 20px;
+            }
+        }
+    }
+    .box__container{
+        position: absolute;
+        left: 20%;
+        top: 30%;
+        display: flex;
+        float: none;
+        align-items: center;
+        color: white;
+        &__card1{
+            background-color: rgb(44, 44, 43);
+            display: flex;
+            align-items: center;
+            padding: 55px 50px;
+            margin: 0 auto;
+            margin: 20px;
+            .icon{
+                font-size: 60px;
+                color: #ffc107;
+                height: 65px;
+                &:hover{
+                    color: white !important;;
+                }
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                padding: 15px 20px;
+            }
+            &:hover{
+                background-color: #ffc107;
+                color: white !important;
+            }
+        }
+        &__card2{
+            background-color: rgb(44, 44, 43);
+            display: flex;
+            align-items: center;
+            padding: 55px 50px;
+            margin: 0 auto;
+            margin: 20px;
+            .icon{
+                font-size: 60px;
+                color: #ffc107;
+                height: 65px;
+                &:hover{
+                    color: white !important;;
+                }
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                padding: 15px 20px;
+            }
+            &:hover{
+                background-color: #ffc107;
+                color: white !important;
+            }
+        }
+        &__card3{
+            background-color: rgb(44, 44, 43);
+            display: flex;
+            align-items: center;
+            padding: 55px 50px;
+            margin: 0 auto;
+            margin: 20px;
+            .icon{
+                font-size: 60px;
+                color: #ffc107;
+                height: 65px;
+                &:hover{
+                    color: white !important;;
+                }
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                padding: 15px 20px;
+            }
+            &:hover{
+                background-color: #ffc107;
+                color: white !important;
+            }
+        }
+    }
+    .back__container{
+        padding: 115px;
+        .container{
+            border: 1px solid black !important;
+            height: 650px;
+            .text{
+                font-size: 30px;
+                padding: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+            }
+            .card__container{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                .back{
+                    background-color: rgb(241, 241, 241);
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                    font-family: Arial, Helvetica;
+                    &__img{
+                        img{
+                            width: 400px;
+                        }
+                    }
+                    &__text{
+                        text-align: center;
+                        &__td{
+                            padding: 30px;
+                            &__title{
+                                font-size: 20px;
+                                font-family: Arial, Helvetica;
+                                font-weight: 100;
+                            }
+                            &__desc{
+                                color: rgb(66, 66, 66);
+                                font-family: Arial, Helvetica;
+                            }
+                        }
+                        &__nt{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: rgb(202, 202, 202);
+                            &__name{
+                                display: flex;
+                                align-items: center;
+                                img{
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    margin: 0px 20px;
+                                }
+                            }
+                            &__price{
+                                background-color: #ffc107;
+                                padding: 20px;
+                                color: white !important;
+                            }
+                        }
+                        button{
+                            margin: 20px;
+                            border: none;
+                            background-color: #ffc107;
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form__container{
+        .form__divs{
+            display: flex;
+            &__one{
+                background-color: #ffc107;
+                width: 50%;
+                padding: 150px;
+            }
+            &__two{
+                background-image: url(https://img.etimg.com/thumb/msid-69901533,width-640,height-480,imgsize-114837,resizemode-4/about-the-company.jpg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
