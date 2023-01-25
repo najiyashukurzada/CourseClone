@@ -5,6 +5,7 @@ import './Home.scss'
 import { AiOutlineGlobal } from "react-icons/ai";
 import { useState } from 'react';
 import axios from 'axios'
+import { BiReceipt } from "react-icons/bi";
 
 const Home = () => {
   let [cards, setCards] =  useState([])
@@ -17,6 +18,13 @@ const Home = () => {
     })
   }, [])
 
+  const sortHandler = () => {
+    setCards(
+      [...cards].sort((a,b)=> {
+        return a.price - b.price
+      })
+    )
+  }
 
   return (
     <div className='home__container'>
@@ -65,6 +73,19 @@ const Home = () => {
         <div className='back__container'>
           <div className='container'>
               <div className='text'>Popular Courses</div>
+              <div className='filter'>
+                <div className='filter__byPrice'>
+                  <input 
+                    type="text"
+                    placeholder='search...'
+                    onChange={(e) => {
+                      setCards (
+                        [...cards].filter((item) => item.price.includes(e.target.value))
+                      )
+                    }} />
+                    <button onClick={sortHandler}>Sort</button>
+                </div>
+              </div>
               <div className='card__container'>
                 {cards?.map((card, index)=> {
                   return (
@@ -111,7 +132,7 @@ const Home = () => {
         <div className='form__container'>
           <div className='form__divs'>
             <div className='form__divs__one'>
-                <h1>Register now and get a discount <p>50%</p> discount until 1 January</h1>
+                <h1>Register now and get a discount 50% discount until 1 January</h1>
                 <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempo.</h5>
                 <button>Register Now</button>
             </div>
@@ -121,6 +142,78 @@ const Home = () => {
                 <input type="text" placeholder='Course desc'/>
                 <input type="text" placeholder='Course Price'/>
                 <button>Search Course</button>
+            </div>
+          </div>
+        </div>
+
+        <div className='service__container'>
+        <h1>Our Services</h1>
+          <div className='container'>
+            <div className='container__it'>
+            <div className='container__it__items'>
+            <div className='container__it__items__icon'>
+                <BiReceipt/>
+            </div>
+            <div className='container__it__items__texts'>
+                <h2>Indoor Courses</h2>
+                <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</h5>
+            </div>
+            </div>
+            </div>
+            <div className='container__it'>
+            <div className='container__it__items'>
+            <div className='container__it__items__icon'>
+                <BiReceipt/>
+            </div>
+            <div className='container__it__items__texts'>
+                <h2>Indoor Courses</h2>
+                <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</h5>
+            </div>
+            </div>
+            </div>
+            <div className='container__it'>
+            <div className='container__it__items'>
+            <div className='container__it__items__icon'>
+                <BiReceipt/>
+            </div>
+            <div className='container__it__items__texts'>
+                <h2>Indoor Courses</h2>
+                <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</h5>
+            </div>
+            </div>
+            </div>
+            <div className='container__it'>
+            <div className='container__it__items'>
+            <div className='container__it__items__icon'>
+                <BiReceipt/>
+            </div>
+            <div className='container__it__items__texts'>
+                <h2>Indoor Courses</h2>
+                <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</h5>
+            </div>
+            </div>
+            </div>
+            <div className='container__it'>
+            <div className='container__it__items'>
+            <div className='container__it__items__icon'>
+                <BiReceipt/>
+            </div>
+            <div className='container__it__items__texts'>
+                <h2>Indoor Courses</h2>
+                <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</h5>
+            </div>
+            </div>
+            </div>
+            <div className='container__it'>
+            <div className='container__it__items'>
+            <div className='container__it__items__icon'>
+                <BiReceipt/>
+            </div>
+            <div className='container__it__items__texts'>
+                <h2>Indoor Courses</h2>
+                <h5>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum.</h5>
+            </div>
+            </div>
             </div>
           </div>
         </div>
